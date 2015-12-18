@@ -1,6 +1,8 @@
 ## TfsAdministrationTool-Web
 node_modules/
+bower_components/
 **/wwwroot/lib/
+temp/
 
 
 ## GIT DEFAULTS

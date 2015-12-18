@@ -1,7 +1,11 @@
 {
-  "name": "ASP.NET",
+  "version": "0.0.1",
+  "name": "TfsAdministrationTool-Web",
+  "author": "Jan Vium Enghoff",
+  "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "~1.4.8"
+    "angular": "~1.4.8",
+    "angular-material": "~1.0.1"
   }
 }
