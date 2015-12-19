@@ -122,6 +122,8 @@
     <Content Include="wwwroot\app\app.module.js" />
     <Content Include="wwwroot\app\app.routes.js" />
     <Content Include="wwwroot\app\main\mainController.js" />
+    <Content Include="wwwroot\app\shared\menu\topMenu.html" />
+    <Content Include="wwwroot\app\shared\menu\topMenuDirective.js" />
     <Content Include="wwwroot\lib\_bower.min.css" />
     <Content Include="wwwroot\lib\_bower.min.js" />
     <Content Include="Web.config" />

@@ -20,6 +20,7 @@ namespace TfsAdministrationTool_Web
                 .Include("~/wwwroot/app/app.module.js")
                 .Include("~/wwwroot/app/app.routes.js")
                 .IncludeDirectory("~/wwwroot/app/main", "*.js")
+                .IncludeDirectory("~/wwwroot/app/shared/menu", "*.js")
                 );
 
 
