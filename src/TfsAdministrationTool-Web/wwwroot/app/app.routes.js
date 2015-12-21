@@ -22,7 +22,7 @@
                 }
             },
             {
-                state: 'projects.details',
+                state: 'details',
                 config: {
                     url: '/details/:projectId',
                     templateUrl: 'wwwroot/app/projects/details/projectDetail.html',

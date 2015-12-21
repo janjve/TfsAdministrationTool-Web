@@ -1,8 +1,29 @@
 ﻿<!-- projects.html -->
-<h1>{{vm.title}}</h1>
-{{vm.title}}
-<hr />
-<a ui-sref="projects.details({ projectId: vm.selectedProject.id, projectName: vm.selectedProject.name })">Show List</a>
-
-<br />
-<div ui-view></div>
+<div layout="column">
+    <div layout="row">
+        <div flex-offset="20" flex="60" layout="column" ng-cloak>
+            <md-content class="md-padding">
+                <p>Pick a project to manage.</p>
+                <md-autocomplete ng-disabled="vm.isDisabled"
+                                 md-no-cache="vm.noCache"
+                                 md-selected-item="vm.selectedItem"
+                                 md-search-text-change="vm.searchTextChange(vm.searchText)"
+                                 md-search-text="vm.searchText"
+                                 md-selected-item-change="vm.selectedItemChange(item)"
+                                 md-items="item in vm.querySearch(vm.searchText)"
+                                 md-item-text="item.display"
+                                 md-min-length="2"
+                                 placeholder="What TFS project are you searching for?">
+                    <md-item-template>
+                        <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                    </md-item-template>
+                    <md-not-found>
+                        No projects matching "{{vm.searchText}}" were found.
+                    </md-not-found>
+                </md-autocomplete>
+                <br />
+                <div ui-view layout="row" layout-align="center center"></div>
+            </md-content>
+        </div>
+    </div>
+</div>
