@@ -13,7 +13,7 @@
         // Creates:
         // 
         var directive = {
-            templateUrl: '/wwwroot/shared/menu/topMenu.html',
+            templateUrl: '/wwwroot/app/shared/menu/topMenu.html',
             link: link,
             restrict: 'EA',
             controller: topMenuController,

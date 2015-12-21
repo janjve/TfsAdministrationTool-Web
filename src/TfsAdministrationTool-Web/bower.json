@@ -6,7 +6,9 @@
   "private": true,
   "dependencies": {
     "angular": "~1.4.8",
-    "angular-route": "~1.4.8",
-    "angular-material": "~1.0.1"
+    "angular-ui-router": "~0.2.15",
+    "angular-material": "~1.0.1",
+    "format": "~0.2.15",
+    "lodash": "~3.10.1"
   }
 }

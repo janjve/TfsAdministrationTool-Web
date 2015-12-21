@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
 
     @*<link href="~/wwwroot/lib/_bower.min.css" rel="stylesheet" type="text/css" />*@
     @Styles.Render("~/bundles/bower_style")
@@ -12,10 +13,8 @@
 
 </head>
 <body>
-    <top-menu></top-menu>
-    <div class="container body-content">
-        {{vm.helloWorld}}
-    </div>
+    <top-menu ng-cloak></top-menu>
+    <div ui-view class="body-content" ng-cloak></div>
 
     @*<script src="~/wwwroot/lib/_bower.min.js"></script>*@
     @Scripts.Render("~/bundles/bower_script")

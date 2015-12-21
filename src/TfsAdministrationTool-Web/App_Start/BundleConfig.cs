@@ -17,19 +17,17 @@ namespace TfsAdministrationTool_Web
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/app_script")
-                .Include("~/wwwroot/app/app.module.js")
-                .Include("~/wwwroot/app/app.routes.js")
-                .IncludeDirectory("~/wwwroot/app/main", "*.js")
-                .IncludeDirectory("~/wwwroot/app/shared/menu", "*.js")
+                .Include("~/wwwroot/app/app.module.js") // Should load first.
+                .IncludeDirectory("~/wwwroot/app", "*.js", true)
                 );
 
 
             bundles.Add(new StyleBundle("~/bundles/bower_style")
-                .Include("~/wwwroot/lib/_bower.min.css")
+                .Include("~/temp/_bower.css")
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/bower_script")
-                .Include("~/wwwroot/lib/_bower.min.js")
+                .Include("~/temp/_bower.js")
                 );
         }
     }

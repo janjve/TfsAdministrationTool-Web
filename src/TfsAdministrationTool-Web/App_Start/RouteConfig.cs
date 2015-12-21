@@ -13,9 +13,11 @@ namespace TfsAdministrationTool_Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Could handle
+
             routes.MapRoute(
                 name: "Default",
-                url: "",
+                url: "{*url}",
                 defaults: new { controller = "Web", action = "Default" }
             );
         }

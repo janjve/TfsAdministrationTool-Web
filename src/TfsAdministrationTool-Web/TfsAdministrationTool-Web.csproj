@@ -119,13 +119,19 @@
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="gruntfile.js" />
+    <Content Include="temp\_bower.css" />
+    <Content Include="temp\_bower.js" />
+    <Content Include="wwwroot\app\app.constants.js" />
     <Content Include="wwwroot\app\app.module.js" />
     <Content Include="wwwroot\app\app.routes.js" />
     <Content Include="wwwroot\app\main\mainController.js" />
+    <Content Include="wwwroot\app\projects\details\projectDetail.html" />
+    <Content Include="wwwroot\app\projects\details\projectDetailController.js" />
+    <Content Include="wwwroot\app\projects\projectsController.js" />
+    <Content Include="wwwroot\app\projects\projects.html" />
     <Content Include="wwwroot\app\shared\menu\topMenu.html" />
     <Content Include="wwwroot\app\shared\menu\topMenuDirective.js" />
-    <Content Include="wwwroot\lib\_bower.min.css" />
-    <Content Include="wwwroot\lib\_bower.min.js" />
+    <Content Include="wwwroot\app\shared\providers\routeHelperProvider.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,11 +164,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="temp\" />
-    <Folder Include="wwwroot\app\default\landingPage\controllers\" />
-    <Folder Include="wwwroot\app\default\landingPage\templates\" />
-    <Folder Include="wwwroot\app\shared\project\controllers\" />
-    <Folder Include="wwwroot\app\shared\project\templates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

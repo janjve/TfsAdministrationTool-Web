@@ -1,0 +1,8 @@
+﻿<!-- projects.html -->
+<h1>{{vm.title}}</h1>
+{{vm.title}}
+<hr />
+<a ui-sref="projects.details({ projectId: vm.selectedProject.id, projectName: vm.selectedProject.name })">Show List</a>
+
+<br />
+<div ui-view></div>

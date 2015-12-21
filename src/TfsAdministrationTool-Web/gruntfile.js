@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='bower_minify' />
+/// <binding />
 /*
 This file in the main entry point for defining grunt tasks and using grunt plugins.
 Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409
@@ -37,6 +37,6 @@ module.exports = function (grunt) {
     });
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask("bower_minify", ['clean', 'bower_concat', 'uglify', 'cssmin']);
+    grunt.registerTask("bower_minify", ['clean', 'bower_concat']);
     grunt.registerTask("app_minify", []);
 };
