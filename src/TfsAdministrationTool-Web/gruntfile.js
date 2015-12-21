@@ -32,11 +32,10 @@ module.exports = function (grunt) {
         },
         watch: {
             files: ["wwwroot/app/**/*.js"],
-            tasks: ["bower_minify"]
+            tasks: ["bower_setup"]
         }
     });
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask("bower_minify", ['clean', 'bower_concat']);
-    grunt.registerTask("app_minify", []);
+    grunt.registerTask("bower_setup", ['clean', 'bower_concat']);
 };
