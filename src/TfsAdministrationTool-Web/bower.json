@@ -8,7 +8,8 @@
     "angular": "~1.4.8",
     "angular-ui-router": "~0.2.15",
     "angular-material": "~1.0.1",
-    "format": "~0.2.15",
+    "angular-material-data-table": "~0.8.14",
+    "format": "~1.0.1",
     "lodash": "~3.10.1"
   }
 }

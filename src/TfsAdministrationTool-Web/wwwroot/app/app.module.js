@@ -3,6 +3,7 @@
 
     angular.module('app', [
         'ui.router',
-        'ngMaterial'
+        'ngMaterial',
+        'md.data.table'
     ]);
 })();
