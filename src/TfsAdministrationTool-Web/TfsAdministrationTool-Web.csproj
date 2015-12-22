@@ -124,15 +124,23 @@
     <Content Include="wwwroot\app\app.constants.js" />
     <Content Include="wwwroot\app\app.module.js" />
     <Content Include="wwwroot\app\app.routes.js" />
+    <Content Include="wwwroot\app\components\projectDetails\directives\tfsProjectDetailsAdminDirective.js" />
+    <Content Include="wwwroot\app\components\projectDetails\directives\tfsProjectDetailsReadDirective.js" />
+    <Content Include="wwwroot\app\components\projectDetails\directives\tfsProjectDetailsLockedDirective.js" />
+    <Content Include="wwwroot\app\components\projectDetails\templates\tfsProjectDetailsAdmin.html" />
+    <Content Include="wwwroot\app\components\projectDetails\templates\tfsProjectDetailsRead.html" />
+    <Content Include="wwwroot\app\components\projectDetails\templates\tfsProjectDetailsLocked.html" />
     <Content Include="wwwroot\app\main\mainController.js" />
-    <Content Include="wwwroot\app\projects\details\projectDetail.html" />
-    <Content Include="wwwroot\app\projects\details\projectDetailController.js" />
-    <Content Include="wwwroot\app\projects\projectsController.js" />
-    <Content Include="wwwroot\app\projects\projects.html" />
+    <Content Include="wwwroot\app\components\projectDetails\projectDetails.html" />
+    <Content Include="wwwroot\app\components\projectDetails\projectDetailsController.js" />
+    <Content Include="wwwroot\app\components\projects\projectsController.js" />
+    <Content Include="wwwroot\app\components\projects\projects.html" />
     <Content Include="wwwroot\app\shared\menu\topMenu.html" />
     <Content Include="wwwroot\app\shared\menu\topMenuDirective.js" />
     <Content Include="wwwroot\app\shared\providers\routeHelperProvider.js" />
     <Content Include="Web.config" />
+    <Content Include="wwwroot\app\shared\users\directives\tfsUserTableDirective.js" />
+    <Content Include="wwwroot\app\shared\users\templates\tfsUserTable.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />

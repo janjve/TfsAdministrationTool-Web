@@ -1,7 +1,7 @@
 ﻿<!-- projects.html -->
 <div layout="column">
     <div layout="row">
-        <div flex-offset="20" flex="60" layout="column" ng-cloak>
+        <div flex-offset="10" flex="80" layout="column" ng-cloak>
             <md-content class="md-padding">
                 <p>Pick a project to manage.</p>
                 <md-autocomplete ng-disabled="vm.isDisabled"
@@ -15,7 +15,7 @@
                                  md-min-length="2"
                                  placeholder="What TFS project are you searching for?">
                     <md-item-template>
-                        <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                        <span md-highlight-text="vm.searchText" md-highlight-flags="i">{{item.display}}</span>
                     </md-item-template>
                     <md-not-found>
                         No projects matching "{{vm.searchText}}" were found.

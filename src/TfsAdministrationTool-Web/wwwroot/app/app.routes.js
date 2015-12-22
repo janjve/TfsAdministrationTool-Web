@@ -11,30 +11,32 @@
     }
 
     function getStates() {
+        var baseTemplateUrl = 'wwwroot/app/components';
         return [
             {
                 state: 'projects',
                 config: {
                     url: '/projects',
-                    templateUrl: 'wwwroot/app/projects/projects.html',
+                    templateUrl: format('{0}/projects/projects.html', baseTemplateUrl),
                     controller: 'projectsController as vm',
                     bindToController: true
                 }
             },
             {
-                state: 'details',
+                state: 'projectDetails',
                 config: {
                     url: '/details/:projectId',
-                    templateUrl: 'wwwroot/app/projects/details/projectDetail.html',
-                    controller: 'projectDetailController as vm',
+                    templateUrl: format('{0}/projectDetails/projectDetails.html', baseTemplateUrl),
+                    controller: 'projectDetailsController as vm',
                     bindToController: true,
                     resolve: {
-                        projectDetailPrepService: ['$stateParams', function ($stateParams) {
+                        projectDetailsPrepService: ['$stateParams', function ($stateParams) {
                             var userModel = {
-                                userRole: 'admin', // Lookup
+                                userRole: 'Unknown', // Lookup
                                 projectId: $stateParams.projectId,
                                 projectName: "ProjectName", // Lookup
-                                users: ['user1', 'user2', 'user3'] // Lookup
+                                users: ['user1', 'user2', 'user3'], // Lookup
+                                roles: ['role1', 'role2', 'role3'] // Lookup
                             }
                             return userModel;
                         }]

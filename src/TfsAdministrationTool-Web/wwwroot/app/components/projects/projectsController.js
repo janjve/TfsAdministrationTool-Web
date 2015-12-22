@@ -45,7 +45,7 @@
 
         }
         function selectedItemChange(item) {
-            $state.go('details', { projectId: vm.selectedProject.id, projectName: vm.selectedProject.name });
+            $state.go('projectDetails', { projectId: vm.selectedProject.id, projectName: vm.selectedProject.name });
         }
 
         function loadAll() {
@@ -55,7 +55,7 @@
               lighlish, Soundle.js, swimlany, mager.js, Aceboile, ndown, loopideo,\
               mapDate, microls, Textifox, nodegexp, ExtJSLint, mastiki, jslideston,\
               fidena, watchaui, quixedDB, Slidata, implettu, klastcli, eveapopup, Exampleast,\
-              shupsList, antabox';
+              shupsList, antabox, Schultz.Connect, Schultz.Test.Git, Schultz.Fasit, Ungeguiden, Schultz.Jobbing';
             return allProjects.split(/, +/g).map(function (project) {
                 return {
                     value: project.toLowerCase(),
@@ -69,7 +69,7 @@
         function createFilterFor(query) {
             var lowercaseQuery = angular.lowercase(query);
             return function filterFn(project) {
-                return (project.value.indexOf(lowercaseQuery) === 0);
+                return (project.value.indexOf(lowercaseQuery) > -1);
             };
         }
 
