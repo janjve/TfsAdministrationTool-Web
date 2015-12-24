@@ -3,7 +3,7 @@
   "name": "TfsAdministrationTool-Web",
   "author": "Jan Vium Enghoff",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "angular": "~1.4.8",
     "angular-ui-router": "~0.2.15",
