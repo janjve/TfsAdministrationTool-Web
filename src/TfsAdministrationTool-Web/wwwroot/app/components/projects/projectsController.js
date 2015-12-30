@@ -5,9 +5,9 @@
         .module('app')
         .controller('projectsController', projectsController);
 
-    projectsController.$inject = ['$location', '$timeout', '$q', '$state'];
+    projectsController.$inject = ['$mdDialog', '$location', '$timeout', '$q', '$state', 'componentBaseUrl'];
 
-    function projectsController($location, $timeout, $q, $state) {
+    function projectsController($mdDialog, $location, $timeout, $q, $state, componentBaseUrl) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'projectsController';
@@ -22,6 +22,8 @@
         vm.querySearch = querySearch;
         vm.selectedItemChange = selectedItemChange;
         vm.searchTextChange = searchTextChange;
+
+        vm.openProjectDialog = openProjectDialog;
 
         activate();
 
@@ -45,7 +47,9 @@
 
         }
         function selectedItemChange(item) {
-            $state.go('projectDetails', { projectId: vm.selectedProject.id, projectName: vm.selectedProject.name });
+            if (typeof item !== "undefined") {
+                $state.go('projectDetails', { projectId: vm.selectedProject.id, projectName: vm.selectedProject.name });
+            }
         }
 
         function loadAll() {
@@ -73,7 +77,23 @@
             };
         }
 
-
+        function openProjectDialog(ev) {
+            $mdDialog.show({
+                controller: 'projectListPickerDialogController as vm',
+                templateUrl: format('{0}/projects/templates/projectListPickerDialog.html', componentBaseUrl),
+                bindToController: true,
+                targetEvent: ev,
+                clickOutsideToClose: true,
+                locals: {
+                    projects: vm.projects
+                }
+            })
+            .then(function (selectedProject) {
+                selectedItemChange(selectedProject);
+            }, function () {
+                /*Cancel*/
+            });
+        }
 
     }
 })();

@@ -1,7 +1,7 @@
 ﻿<!-- projects.html -->
-<div layout="column">
+<div layout="column" ng-cloak>
     <div layout="row">
-        <div flex-offset="10" flex="80" layout="column" ng-cloak>
+        <div flex-offset="10" flex="80" layout="column">
             <md-content class="md-padding">
                 <p>Pick a project to manage.</p>
                 <md-autocomplete ng-disabled="vm.isDisabled"
@@ -22,7 +22,9 @@
                     </md-not-found>
                 </md-autocomplete>
                 <br />
-                <div ui-view layout="row" layout-align="center center"></div>
+                <div layout="row" layout-align="end start">
+                    <md-button class="md-raised md-primary" ng-click="vm.openProjectDialog($event)">Show all</md-button>
+                </div>
             </md-content>
         </div>
     </div>
