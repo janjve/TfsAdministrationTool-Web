@@ -1,4 +1,4 @@
-# TfsAdministrationTool-Web
+# [Deprecated]TfsAdministrationTool-Web
 To install run following in cmd:
 
 ```
